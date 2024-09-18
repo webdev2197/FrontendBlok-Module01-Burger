@@ -4,13 +4,17 @@
 
   --accent-light: #FBB731;
   --accent-dark: #F37335;
-
   --dark: #443737;
   --light: #fff;
+  --light-rgb: 255, 255, 255;
 }
 
 body {
   font-family: var(--open-sans);
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -19,6 +23,8 @@ body {
   max-width: 1182px;
   padding: 0 15px;
 }
+
+/*header*/
 
 .header {
   display: flex;
@@ -45,7 +51,6 @@ body {
 
 .nav-link {
   color: var(--dark);
-  text-decoration: none;
   font-weight: 600;
   font-size: 20px;
 }
@@ -61,15 +66,15 @@ body {
 
 .cart {
   color: var(--dark);
-  text-decoration: none;
   font-weight: 700;
   font-size: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 
-.cart::before{
+.cart::before {
   content: '';
   display: block;
   width: 30px;
@@ -79,7 +84,7 @@ body {
   background-size: contain;
 }
 
-.cart-count{
+.cart-count {
   width: 17px;
   height: 17px;
   background-color: var(--accent-dark);
@@ -89,4 +94,66 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
+  position: absolute;
+  left: 17px;
+  bottom: 0px;
+}
+
+/*Hero*/
+
+.hero {
+  background-image: url(../images/hero.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 142px 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 16px;
+  padding-left: 0;
+  color: rgba(var(--light-rgb), .5);
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: '/';
+  position: absolute;
+  right: -12px;
+}
+
+.breadcrumbs-link {
+  color: rgba(var(--light-rgb), .5);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--accent-light);
+}
+
+.hero-title {
+  color: var(--light);
+  font-family: var(--nunito-sans);
+  font-size: 79px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.hero-description {
+  color: rgba(var(--light-rgb), .8);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 320px;
+  margin: 0 auto;
 }
