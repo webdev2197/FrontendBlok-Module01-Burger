@@ -5,7 +5,7 @@
   --accent-light: #FBB731;
   --accent-dark: #F37335;
   --dark: #443737;
-  --light: #fff;
+  --light: rgba(255, 255, 255);
   --light-rgb: 255, 255, 255;
 }
 
@@ -27,6 +27,10 @@ a {
 /*header*/
 
 .header {
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.header-wrapper {
   display: flex;
   align-items: center;
   gap: 196px;
@@ -46,7 +50,7 @@ a {
   flex-grow: 1;
   /*вытягивает на всю ширину flex-элементы*/
   display: flex;
-  gap: 46px;
+  gap: 47px;
 }
 
 .nav-link {
@@ -147,6 +151,8 @@ a {
   font-size: 79px;
   font-weight: 700;
   text-transform: capitalize;
+  margin-top: 19px;
+  margin-bottom: 19px;
 }
 
 .hero-description {
@@ -156,4 +162,69 @@ a {
   line-height: 160%;
   max-width: 320px;
   margin: 0 auto;
+}
+
+/*banner*/
+
+.banner {
+  margin-top: 140px;
+}
+
+.banner-wrapper{
+  background-image: url(../images/banner.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 100px;
+}
+
+.banner-title {
+  color: var(--light);
+  font-family: var(--nunito-sans);
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 74px;
+  margin-top: 0px;
+  margin-bottom: -4px;
+}
+
+.banner-title span {
+  display: block;
+  background-color: var(--accent-dark);
+  padding: 5px 0;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  border-radius: 14px;
+  width: 95px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.banner-description {
+  max-width: 353px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 15px;
+  color: rgba(var(--light-rgb), .8);
+}
+
+.banner-btn {
+  padding: 20px 26px;
+  border-radius: 5px;
+  font-family: var(--nunito-sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: var(--accent-light);
+  color: var(--dark);
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.banner-btn:hover{
+  background-color: var(--accent-dark);
 }
