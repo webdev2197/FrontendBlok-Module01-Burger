@@ -83,7 +83,7 @@ ul {
   transition: var(--tr);
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after {
   background-color: var(--accent-light);
 }
 
@@ -120,6 +120,38 @@ ul {
   position: absolute;
   left: 17px;
   bottom: 0px;
+}
+
+.button-up {
+  max-width: 80px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: var(--nunito-sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: var(--accent-light);
+  color: var(--dark);
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--tr);
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.button-up:hover {
+  background-color: var(--accent-dark);
+}
+
+.button-up.hidden{
+  opacity: 0;
+}
+
+.button-up.visible{
+ opacity: 1;
 }
 
 /*Hero*/
@@ -232,7 +264,10 @@ ul {
 }
 
 .banner-btn {
-  padding: 20px 26px;
+  display: block;
+  max-width: 170px;
+  text-align: center;
+  padding: 20px 0;
   border-radius: 5px;
   font-family: var(--nunito-sans);
   font-size: 14px;
@@ -399,7 +434,7 @@ ul {
   padding: 111px 0 106px 0;
 }
 
-.logo-min{
+.logo-min {
   margin-top: 6px;
 }
 
@@ -451,8 +486,8 @@ ul {
   transition: var(--tr);
 }
 
-.footer-link:hover{
-color: var(--accent-light);
+.footer-link:hover {
+  color: var(--accent-light);
 }
 
 .footer-tel {
@@ -468,17 +503,17 @@ color: var(--accent-light);
   transition: var(--tr);
 }
 
-.footer-tel:hover{
-color: var(--light);
+.footer-tel:hover {
+  color: var(--light);
 }
 
 /*Contact*/
 
-.hero-contact{
+.hero-contact {
   background-image: url(../images/hero-contact.jpg);
 }
 
-.contact{
+.contact {
   margin-bottom: 140px;
 }
 
