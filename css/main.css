@@ -34,6 +34,7 @@ ul {
   margin: 0 auto;
   max-width: 1182px;
   padding: 0 15px;
+  box-sizing: border-box;
 }
 
 /*header*/
@@ -45,7 +46,7 @@ ul {
 .header-wrapper {
   display: flex;
   align-items: center;
-  gap: 196px;
+  gap: 56px;
   padding: 26px 0;
 }
 
@@ -63,6 +64,7 @@ ul {
   /*вытягивает на всю ширину flex-элементы*/
   display: flex;
   gap: 47px;
+  margin-left: min(10vw, 140px);
 }
 
 .nav-link {
@@ -146,12 +148,12 @@ ul {
   background-color: var(--accent-dark);
 }
 
-.button-up.hidden{
+.button-up.hidden {
   opacity: 0;
 }
 
-.button-up.visible{
- opacity: 1;
+.button-up.visible {
+  opacity: 1;
 }
 
 /*Hero*/
@@ -615,4 +617,43 @@ ul {
 
 .contact-tel:hover {
   color: var(--accent-light);
+}
+
+/*media*/
+
+@media (max-width: 1080px) {
+  .header-wrapper {
+    gap: 40px;
+  }
+
+  .nav {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+      gap: 45px;
+    }
+  
+  .logo{
+    width: 176px;
+    height: 56px;
+  }
+
+  .nav{
+    gap: 22px;
+  }
+
+  .banner{
+    margin-top: 72px;
+  }
+
+  .banner-wrapper{
+    padding: 100px 40px;
+  }
+
+  .menu-header{
+    margin-top: 80px;
+  }
 }
