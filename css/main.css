@@ -50,6 +50,17 @@ ul {
   padding: 26px 0;
 }
 
+.burger-menu {
+  display: none;
+  width: 34px;
+  height: 22px;
+  background-image: url(../images/burger-menu.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+}
+
 .logo {
   display: block;
   background-image: url(../images/logo.svg);
@@ -507,7 +518,7 @@ ul {
 }
 
 .footer-item:last-child {
-  flex-basis: 194px;
+  flex-basis: 12%;
 }
 
 .footer-tel:hover {
@@ -640,6 +651,12 @@ ul {
   }
 }
 
+@media (max-width: 815px) {
+  .nav {
+    gap: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .header-wrapper {
     gap: 45px;
@@ -705,5 +722,111 @@ ul {
   .footer-tel._mobile {
     display: block;
     text-align: left;
+  }
+}
+
+@media (max-width: 750px) {
+  .nav {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 730px) {
+  .nav {
+    display: none;
+  }
+
+  .nav._modal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal {
+    background-color: #FFF8DC;
+    padding: 40px 15px;
+    position: absolute;
+    top: -400px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    transition: var(--tr);
+  }
+
+  .nav._modal .nav-link {
+    display: block;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .header-wrapper {
+    gap: 21px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .logo {
+    width: 116px;
+    height: 37px;
+    flex-grow: 1;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .hero-title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 52px;
+    margin-bottom: 8px;
+  }
+
+  .hero-description {
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .banner-wrapper {
+    padding: 35px 15px;
+  }
+
+  .banner-description {
+    max-width: 233px;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--light);
+  }
+
+  .banner-btn {
+    padding: 20px 10px;
+  }
+
+  .modal-close {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }
