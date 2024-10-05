@@ -519,6 +519,7 @@ ul {
 
 .footer-item:last-child {
   flex-basis: 12%;
+  min-width: 176px;
 }
 
 .footer-tel:hover {
@@ -886,21 +887,21 @@ ul {
     position: relative;
   }
 
-  .logo-min{
+  .logo-min {
     margin-bottom: 25px;
   }
 
-  ._mobile{
+  ._mobile {
     position: absolute;
     top: 59px;
     right: 2px;
   }
 
-  ._mobile + ._mobile{
+  ._mobile+._mobile {
     top: 97px;
   }
 
-  .footer-title{
+  .footer-title {
     font-size: 18px;
   }
 }
