@@ -640,6 +640,10 @@ ul {
   color: var(--accent-light);
 }
 
+.modal{
+  display: none;
+}
+
 /*media*/
 
 @media (max-width: 1080px) {
@@ -744,6 +748,7 @@ ul {
   }
 
   .modal {
+    display: block;
     background-color: #FFF8DC;
     padding: 40px 15px;
     position: absolute;
